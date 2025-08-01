@@ -1,8 +1,8 @@
 {
-  "name": "ansible-web",
+  "name": "ansible-web-platform",
   "version": "1.0.0",
-  "description": "Ansible Web管理平台 - 全栈项目",
-  "private": true,
+  "description": "企业级Ansible Web管理平台 - 提供可视化界面管理Ansible playbooks、主机清单、任务调度等功能",
+  "private": false,
   "workspaces": [
     "frontend",
     "backend"
@@ -21,7 +21,8 @@
     "lint:frontend": "cd frontend && npm run lint",
     "lint:backend": "cd backend && python -m flake8 app/ && python -m black --check app/",
     "init:db": "cd backend && python scripts/init_db.py",
-    "setup": "npm install && cd frontend && npm install && cd ../backend && pip install -r requirements.txt"
+    "setup": "npm install && cd frontend && npm install && cd ../backend && pip install -r requirements.txt",
+    "start": "./quick-start.sh"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
@@ -32,8 +33,23 @@
     "automation",
     "web-ui",
     "fastapi",
-    "react"
+    "react",
+    "enterprise",
+    "monitoring",
+    "orchestration"
   ],
-  "author": "Tech Team",
-  "license": "MIT"
+  "author": "Ansible Web Platform Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Oumu33/ansible-web-platform.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Oumu33/ansible-web-platform/issues"
+  },
+  "homepage": "https://github.com/Oumu33/ansible-web-platform#readme",
+  "engines": {
+    "node": ">=16.0.0",
+    "python": ">=3.7.0"
+  }
 }
